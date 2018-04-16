@@ -79,16 +79,16 @@ def game_intro():
             -30)
         text.message_to_screen("við að boða út fagnaðarerindið og fjölga stuðningsmönnum um borð í",
             var.black,
-            -10)
+            -5)
         text.message_to_screen("Miðflokkslestinni. En vegurinn er háll og hætturnar leynast víða.",
             var.black,
-            10)
+            20)
         text.message_to_screen("Safnaðu liði um borð í Miðflokkslestina en gættu",
             var.black,
             90)
         text.message_to_screen("þess um leið að fara ekki út af sporinu.",
             var.black,
-            110)
+            115)
         text.message_to_screen("Veldu BILSTÖNG til þess að spila og ESC til að stöðva leik.",
             var.black,
             180)
@@ -176,6 +176,7 @@ def gameLoop():
 
     old_r = 0
     currentImage = var.img_midfl1
+    life = 4
 
     while not gameExit:
         # Leik lokið skjár
@@ -189,7 +190,6 @@ def gameLoop():
             text.message_to_screen("Þú misstir stjórn á lestinni með þeim afleingum að hún fór út af sporinu.",
                 var.black,
                 -30,)
-            life = 3
             text.message_to_screen("Þú missir eitt líf og átt nú %d líf eftir." % life,
                 var.black,
                 15,)
@@ -239,7 +239,7 @@ def gameLoop():
                 40,)
             text.message_to_screen("Þú hefur safnað %d stigum." % (snakeLength - 1),
                 var.black,
-                65)
+                95)
 
             text.button("Næsta borð", 240, 500, 120, 50, var.green, var.light_green, "lvl3")
             btn = text.button("Til baka", 440, 500, 120, 50, var.yellow, var.light_yellow, "back")
@@ -291,6 +291,7 @@ def gameLoop():
 
         if lead_x >= var.display_width or lead_x < -10 or lead_y >= var.display_height - border or lead_y < border:
             gameOver = True
+            life -= 1
 
         lead_x += lead_x_change
         lead_y += lead_y_change

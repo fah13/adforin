@@ -14,7 +14,6 @@ class Character():
         self.countLife = 4
 
     def mainView(self):
-        print(self.outfit)
         run = True
 
         while run:
@@ -70,7 +69,6 @@ class Character():
 
 
     def setOutfit(self):
-        print(self.outfit)
         run = True
 
         while run:
@@ -137,22 +135,17 @@ class Character():
         if color == "black":
             self.image = var.sdg_black
             self.outfit = "svörtum"
-            print(self.outfit)
         elif color == "red":
             self.image = var.sdg_red
             self.outfit = "rauðum"
-            print(self.outfit)
         elif color == "yellow":
             self.image = var.sdg_yellow
             self.outfit = "gulum"
-            print(self.outfit)
         else:
             pass
 
 
     def info(self):
-        print("Hér færð þú upplýsingar.")
-        print(self.outfit)
         run = True
 
         while run:

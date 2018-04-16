@@ -120,6 +120,7 @@ def keys(player, cake):
         player.direction = False
         cake.speedx = 10
     elif keys[pygame.K_ESCAPE]:
+        pygame.mixer.music.stop()
         return True
     elif keys[pygame.K_p]:
         a = pause()
@@ -192,7 +193,7 @@ def game_intro():
             160)
         text.message_to_screen("Veldu BILSTÖNG til þess að spila, P til þess að stöðva leik og ESCAPE til að hætta.",
             var.black,
-            185)
+            190)
 
         pygame.display.update()
         var.clock.tick(15)
@@ -250,6 +251,7 @@ def gameLoop():
                     sys.exit()
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_q:
+                        pygame.mixer.music.stop()
                         run = False
                         gameOver = False
                     elif event.key == pygame.K_c:

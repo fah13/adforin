@@ -55,13 +55,10 @@ def button(text, x, y, width, height, inactive_color, active_color, action):
                 var.action == ""
                 c.info()
             elif var.action == "black":
-                print("Btn: black")
                 return var.action
             elif var.action == "red":
-                print("Btn: red")
                 return var.action
             elif var.action == "yellow":
-                print("Btn: yellow")
                 return var.action
             else:
                 pass

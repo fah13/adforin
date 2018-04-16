@@ -172,23 +172,19 @@ class Level():
             var.clock.tick(15)
 
     def char():
-        print("Leikmaður")
         a = c.mainView()
 
     def level1():
-        print("Borð 1")
         a = bord1.game_intro()
         if a != True:
             bord1.gameLoop()
 
     def level2():
-        print("Borð 2")
         a = bord2.game_intro()
         if a != True:
             bord2.gameLoop()
 
     def level3():
-        print("Borð 3")
         a = bord3.gameLoop()
 
 pygame.init()

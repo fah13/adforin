@@ -40,9 +40,9 @@ snd_dir = path.join(path.dirname(__file__), "Hljóð")
 
 # Myndir
 mainView_bg = pygame.image.load(path.join(img_dir, "background_blur.png")).convert_alpha()
-sdg_black = pygame.image.load(path.join(img_dir, "sdg_black.png")).convert_alpha()
-sdg_red = pygame.image.load(path.join(img_dir, "sdg_red.png")).convert_alpha()
-sdg_yellow = pygame.image.load(path.join(img_dir, "sdg_yellow.png")).convert_alpha()
+sdg_black = pygame.image.load(path.join(img_dir, "sdg_2_black.png")).convert_alpha()
+sdg_red = pygame.image.load(path.join(img_dir, "sdg_2_red.png")).convert_alpha()
+sdg_yellow = pygame.image.load(path.join(img_dir, "sdg_2_yellow.png")).convert_alpha()
 
 # Borð 1
 lvl1_background = pygame.image.load(path.join(img_dir, "background.png")).convert()
