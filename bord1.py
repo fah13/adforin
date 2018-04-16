@@ -6,7 +6,7 @@ import variables, character, text
 import character
 
 var = variables
-char = character
+#char = character.Character()
 # define display surface
 
 # initialise display

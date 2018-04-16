@@ -60,10 +60,6 @@ for img in sdg_yellow_list:
 # Borð 1
 lvl1_background = pygame.image.load(path.join(img_dir, "background.png")).convert()
 cake_img = pygame.image.load(path.join(img_dir, "cake.png")).convert_alpha()
-p_images = []
-p_img_list = ["sdg_1.png", "sdg_2.png", "sdg_3.png", "sdg_4.png", "sdg_5.png"]
-for img in p_img_list:
-    p_images.append(pygame.image.load(path.join(img_dir, img)).convert_alpha())
 
 # Borð 2
 img_bord3 = pygame.image.load(path.join(img_dir, 'lest2.png')).convert_alpha()
