@@ -26,7 +26,7 @@ def pause(snakeLength):
                 pygame.quit()
                 quit()
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_c:
+                if event.key == pygame.K_SPACE or event.key == pygame.K_ESCAPE:
                     paused = False
                 elif event.key == pygame.K_q:
                     pygame.quit()
@@ -37,7 +37,7 @@ def pause(snakeLength):
             var.green,
             -100,
             size = "large")
-        text.message_to_screen("Veldu C til þess að halda áfram eða Q til að hætta.",
+        text.message_to_screen("Veldu BILSTÖNG til þess að halda áfram.",
             var.black,
             180)
 
@@ -64,12 +64,12 @@ def game_intro():
                 pygame.quit()
                 quit()
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_c:
+                if event.key == pygame.K_SPACE:
                     intro = False
                 elif event.key == pygame.K_q:
                     pygame.quit()
                     quit()
-                elif event.key == pygame.K_r:
+                elif event.key == pygame.K_ESCAPE:
                     return True
 
         var.gameDisplay.fill(var.light_grey)
@@ -89,7 +89,7 @@ def game_intro():
         text.message_to_screen("þess um leið að fara ekki út af sporinu.",
             var.black,
             110)
-        text.message_to_screen("Veldu C til þess að spila, P til að stöðva leik eða Q til þess að hætta.",
+        text.message_to_screen("Veldu BILSTÖNG til þess að spila og ESC til að stöðva leik.",
             var.black,
             180)
 
@@ -123,12 +123,6 @@ def text_objects(text, color, size):
         textSurface = var.largefont.render(text, True, color)
     return textSurface, textSurface.get_rect()
 
-"""def message_to_screen(msg, color, y_displace=0, size="small"):
-    #gameDisplay.fill(dgrey)
-    textSurf, textRect = text_objects(msg, color, size)
-
-    textRect.center = (var.display_width / 2), (var.display_height / 2) + y_displace
-    var.gameDisplay.blit(textSurf, textRect)"""
 
 def changeImg():
     old_r = 0
@@ -223,7 +217,7 @@ def gameLoop():
                         gameOver = False
                     elif event.key == pygame.K_c:
                         return False
-                    elif event.key == pygame.K_r:
+                    elif event.key == pygame.K_ESCAPE:
                         return True
 
         while isVictory == True:
@@ -267,7 +261,7 @@ def gameLoop():
                         gameOver = False
                     elif event.key == pygame.K_c:
                         return False
-                    elif event.key == pygame.K_r:
+                    elif event.key == pygame.K_ESCAPE:
                         return True
 
         for event in pygame.event.get():
@@ -290,9 +284,10 @@ def gameLoop():
                     direction = "down"
                     lead_y_change += block_size
                     lead_x_change = 0
-                elif event.key == pygame.K_p:
+                elif event.key == pygame.K_p or event.key == pygame.K_ESCAPE:
                     pause(snakeLength)
                     time.sleep(.5)
+
 
         if lead_x >= var.display_width or lead_x < -10 or lead_y >= var.display_height - border or lead_y < border:
             gameOver = True
