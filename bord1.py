@@ -22,11 +22,11 @@ class Player:
         self.posY = y
         self.platform_y = y
         self.circlePosX = circleX
-        self.image = pygame.transform.scale(var.p_images[1], (56, 152))
-        self.image_jump = pygame.transform.scale(var.p_images[0], (56, 152))
-        self.image_jumpback = pygame.transform.scale(var.p_images[4], (56, 152))
-        self.image_run = pygame.transform.scale(var.p_images[2], (56, 152))
-        self.image_runback = pygame.transform.scale(var.p_images[3], (56, 152))
+        self.image = pygame.transform.scale(var.sdg_yellow[1], (56, 152))
+        self.image_jump = pygame.transform.scale(var.sdg_yellow[0], (56, 152))
+        self.image_jumpback = pygame.transform.scale(var.sdg_yellow[4], (56, 152))
+        self.image_run = pygame.transform.scale(var.sdg_yellow[2], (56, 152))
+        self.image_runback = pygame.transform.scale(var.sdg_yellow[3], (56, 152))
         self.size = size
         self.jumping = False
         self.playerVelocityX = 0

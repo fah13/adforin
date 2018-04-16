@@ -6,7 +6,7 @@ import bord1, bord2, bord3
 
 class Character():
     def __init__(self):
-        self.image = var.sdg_black
+        self.image = var.sdg1_black
         self.name = "Sigmundur Davíð"
         self.outfit = "svörtum"
         self.outfitPicked = False
@@ -133,13 +133,13 @@ class Character():
 
     def changeOutfit(self, color):
         if color == "black":
-            self.image = var.sdg_black
+            self.image = var.sdg1_black
             self.outfit = "svörtum"
         elif color == "red":
-            self.image = var.sdg_red
+            self.image = var.sdg1_red
             self.outfit = "rauðum"
         elif color == "yellow":
-            self.image = var.sdg_yellow
+            self.image = var.sdg1_yellow
             self.outfit = "gulum"
         else:
             pass
