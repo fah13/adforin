@@ -117,7 +117,7 @@ city_noise = "city.ogg"
 snake_sound = pygame.mixer.Sound(path.join(snd_dir, "pow3.wav"))
 
 # Borð 3
-space_music = "tgfcoder-FrozenJam-SeamlessLoop.ogg"
+space_music = "Hljóð/tgfcoder-FrozenJam-SeamlessLoop.ogg"
 shoot_sound = pygame.mixer.Sound(path.join(snd_dir, "sfx_laser2.ogg"))
 shield_sound = pygame.mixer.Sound(path.join(snd_dir, "pow2.wav"))
 power_sound = pygame.mixer.Sound(path.join(snd_dir, "pow3.wav"))

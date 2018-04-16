@@ -1,13 +1,14 @@
 import pygame
 import time
 import random
-import variables
-import text
+import variables, text
+import life
 
 pygame.init()
 pygame.display.set_caption("Aðförin")
 
 var = variables
+l = life.Life()
 
 border = 40
 
@@ -190,7 +191,7 @@ def gameLoop():
             text.message_to_screen("Þú misstir stjórn á lestinni með þeim afleingum að hún fór út af sporinu.",
                 var.black,
                 -30,)
-            text.message_to_screen("Þú missir eitt líf og átt nú %d líf eftir." % life,
+            text.message_to_screen("Þú missir eitt líf og átt nú %d líf eftir." % l.countLife,
                 var.black,
                 15,)
             text.message_to_screen("Þú hlaust %d stig." % (snakeLength - 1),
@@ -291,7 +292,7 @@ def gameLoop():
 
         if lead_x >= var.display_width or lead_x < -10 or lead_y >= var.display_height - border or lead_y < border:
             gameOver = True
-            life -= 1
+            l.changeLife(gameOver)
 
         lead_x += lead_x_change
         lead_y += lead_y_change
@@ -313,6 +314,7 @@ def gameLoop():
         for eachSegment in snakeList[:-1]:
             if eachSegment == snakeHead:
                 gameOver = True
+                l.changeLife(gameOver)
 
         snake(block_size, snakeList)
 

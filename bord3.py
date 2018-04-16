@@ -1,11 +1,12 @@
 import pygame
 import time
 import random
-from os import path
-import variables
-import text
+import variables, text
+import life
+
 
 var = variables
+#life.Life.changeLife(False)
 # set up assets folders
 
 
@@ -297,7 +298,7 @@ def game_intro():
 
 def gameLoop():
     # Load all game sounds
-    pygame.mixer.music.load(path.join(var.snd_dir, var.space_music))
+    pygame.mixer.music.load(var.space_music)
     pygame.mixer.music.set_volume(0.4)
 
     pygame.mixer.music.play(loops=-1)
@@ -339,11 +340,11 @@ def gameLoop():
             text.message_to_screen("endanlega í burtu. Réttlætið neyðist til þess að lúta í gras fyrir",
                 var.black,
                 -5,)
-            text.message_to_screen("ragnlætinu.",
+            text.message_to_screen("ranglætinu.",
                 var.black,
                 20,)
-            life = 3
-            text.message_to_screen("Þú missir eitt líf og átt nú %d líf eftir." % life,
+            pLife = 2
+            text.message_to_screen("Þú missir eitt líf og átt nú %d líf eftir." % pLife,
                 var.black,
                 70,)
             text.message_to_screen("Þú hlaust %d stig." % (score),
@@ -391,7 +392,7 @@ def gameLoop():
             text.message_to_screen("eigenda. Aðförinni er lokið og framundan bjartir tímar fyrir land og þjóð.",
                 var.black,
                 40,)
-            text.message_to_screen("Þú hefur safnað %d stigum." % score,
+            text.message_to_screen("Þú hefur safnað %d stigum." % (score + 10),
                 var.black,
                 85)
 
@@ -480,6 +481,7 @@ def gameLoop():
         # if the player died and the explotion has finished playing
         if player.lives == 0 and not death_explotion.alive():
             gameOver = True
+            #l.changeLife(gameOver)
 
         if score == 1000:
             isVictory = True

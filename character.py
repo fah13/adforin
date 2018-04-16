@@ -3,6 +3,10 @@ import variables
 import text
 import random
 import bord1, bord2, bord3
+import life
+
+
+l = life.Life()
 
 class Character():
     def __init__(self):
@@ -11,7 +15,7 @@ class Character():
         self.outfit = "svörtum"
         self.outfitPicked = False
         self.points = 0
-        self.countLife = 4
+        self.countLife = l.countLife
 
     def mainView(self):
         run = True
