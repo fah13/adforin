@@ -41,9 +41,16 @@ snd_dir = path.join(path.dirname(__file__), "Hljóð")
 # Myndir
 mainView_bg = pygame.image.load(path.join(img_dir, "background_blur.png")).convert_alpha()
 
-sdg1_black = pygame.image.load(path.join(img_dir, "sdg_2_black.png")).convert_alpha()
-sdg1_red = pygame.image.load(path.join(img_dir, "sdg_2_red.png")).convert_alpha()
-sdg1_yellow = pygame.image.load(path.join(img_dir, "sdg_2_yellow.png")).convert_alpha()
+sdg_black = []
+sdg_black_list = ["sdg_1_black.png", "sdg_2_black.png", "sdg_3_black.png", "sdg_4_black.png", "sdg_5_black.png"]
+for img in sdg_black_list:
+    sdg_black.append(pygame.image.load(path.join(img_dir, img)).convert_alpha())
+
+sdg_red = []
+sdg_red_list = ["sdg_1_red.png", "sdg_2_red.png", "sdg_3_red.png", "sdg_4_red.png", "sdg_5_red.png"]
+for img in sdg_red_list:
+    sdg_red.append(pygame.image.load(path.join(img_dir, img)).convert_alpha())
+
 sdg_yellow = []
 sdg_yellow_list = ["sdg_1_yellow.png", "sdg_2_yellow.png", "sdg_3_yellow.png", "sdg_4_yellow.png", "sdg_5_yellow.png"]
 for img in sdg_yellow_list:
