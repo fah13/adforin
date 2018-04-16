@@ -37,7 +37,7 @@ def pause(snakeLength):
             var.green,
             -100,
             size = "large")
-        text.message_to_screen("Veldu BILSTÖNG til þess að halda áfram.",
+        text.message_to_screen("Veldu BILSTÖNG til þess að halda áfram." ,
             var.black,
             180)
 
