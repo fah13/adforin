@@ -6,3 +6,6 @@ Sigmundur Davíð, fyrrverandi ráðherra, er aðalsöguhetja leiksins og er 
 Við hönnun leikjarins var notast við nokkur gagnasöfn og lögð var áhersla á hlutbundna forritun og samskipti milli klasa. Gerð voru UML rit og er uppsetning kóðans sýnd myndrænt í skýrslunni.
 
 Afurð verkefnisins er leikurinn Aðförin sem hefur gott afþreyingargildi og stenst helstu upp- haflegu markmið og kröfur. Verktakar eru ánægðir með útkomuna og lærðu heilmikið af þessari vinnu. Hver veit hvert framhaldið verður og hvert þetta verkefni leiðir okkur?
+
+# Höfundar
+Höfundar leiksins eru þau Friðrik Árni Halldórsson, Guðrún Snorra Þórsdóttir og Sigrún Sayeh.
